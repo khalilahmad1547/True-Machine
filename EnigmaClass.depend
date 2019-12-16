@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1576173121 source:c:\users\abdullah\documents\cpp\enigmaclass\main.cpp
+	<iostream>
+	"Enigma.h"
+	"Enigma.cc"
+
+1576173162 c:\users\abdullah\documents\cpp\enigmaclass\enigma.h
+
+1576173618 c:\users\abdullah\documents\cpp\enigmaclass\enigma.cc
+	"Enigma.h"
+	<cstdlib>
+	<fstream>
+	<cstring>
+	"Rottor.h"
+	"Rottor.cc"
+	"plugboard.h"
+	"Plugboard.cc"
+	"Reflector.h"
+	"reflector.cc"
+
+1576074995 c:\users\abdullah\documents\cpp\enigmaclass\rottor.h
+
+1576075030 c:\users\abdullah\documents\cpp\enigmaclass\rottor.cc
+
+1576074170 c:\users\abdullah\documents\cpp\enigmaclass\plugboard.h
+
+1575724566 c:\users\abdullah\documents\cpp\enigmaclass\plugboard.cc
+	"plugboard.h"
+
+1576077700 c:\users\abdullah\documents\cpp\enigmaclass\reflector.h
+
+1576076414 c:\users\abdullah\documents\cpp\enigmaclass\reflector.cc
+	"Reflector.h"
+	<cstring>
+
