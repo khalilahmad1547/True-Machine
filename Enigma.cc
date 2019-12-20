@@ -12,11 +12,14 @@ Enigma::Enigma()
 {
 
 }
+void Enigma::SetRotor(int a, int b, int c)
+{
+    R1 = a;
+    R2 = b;
+    R3 = c;
+}
 void Enigma::FileHandling(char * arrq, char * arrp, int p)
 {
-
-    cout<<"You are goood Abdullah 1"<<endl;
-
 
          plug = 0;
                 Ref = 0;
@@ -151,40 +154,7 @@ void Enigma::FileHandling(char * arrq, char * arrp, int p)
                         }
                         //*************************************************************//
 
-/*
-                        finp >> word;
 
-                        if(word == "Reflector:")
-                        {
-                           char *RF = new char [26];
-                           g = 0;
-                           t = 25;
-                           finp.get(ch);
-                           Ref = 1;
-                           for(int g=0; g<=13; g++)
-                           {
-                                finp.get(ch);
-                                RF[g] =ch;
-
-                                finp.get(ch);
-                                RF[t] = ch;
-
-                                finp.get(ch);
-
-                                if(int(ch) != 10)
-                                {
-                                    cout<<"Enter in correct pair \n Remember no pair has more two elements\n";
-                                    Ref = 0;
-                                    break;
-                                    exit(0);
-                                }
-                                if(g == 13  || t == 13)
-                                    break;
-                                t--;
-                            }
-                            cout<<"strlen(RF) = "<<strlen(RF)<<endl;
-                            cout<<"Reflector Array: "<<RF<<endl;
-                        }*/
         //################################################################################################################
             }
           finp.close();
@@ -246,9 +216,9 @@ void Enigma::FileHandling(char * arrq, char * arrp, int p)
                         ptr[y]=ptr[y]+32;
                         }
                   }
-                  cout<<ptr<<endl;
+            //cout<<ptr<<endl;
              //################################################################################################//
-
+/*
 		  fin >> R1;
 		  try{ if (R1 == 0)
                 {
@@ -294,39 +264,22 @@ void Enigma::FileHandling(char * arrq, char * arrp, int p)
                 exit(0);
             }
 		 cout<<"Rotor 1 key : "<<R1<<endl<<"Rotor 2 key : "<<R2<<endl<<"Rotor 3 key : "<<R3<<endl<<endl;
+		 */
         // delete[] ptr;
     }
 
-
-
-
-
-
-void Enigma::Cipher()
+string Enigma::Cipher()
 {
-    cout<<"You are goood Abdullah 2"<<endl;
-
-
-
-            ofstream fout;
-            fout.open("All possible combination.txt");
-            int t =0;
-
-           for ( R3= 0; R3<26; R3++)
-            {
-                for ( R2= 0; R2<26; R2++)
-                {
-                      for ( R1= 0; R1<26; R1++)
-                        {
             Plugboard A(q, plug);
             Reflector B(RF, Ref);
             Rottor C(R1,RR1, 1, Rot1);
             Rottor D(R2,RR2, 2, Rot2);
             Rottor E(R3,RR3, 3, Rot3);
             char a;
-          //  cout << "String is "<<ptr<<endl<<"Message length is "<<i<<endl<<endl;
+            Output = "";
+            //cout << "String is "<<ptr<<endl<<"Message length is "<<i<<endl<<endl;
 
-             //   cout<< "Encrypted message is \" ";
+               // cout<< "Encrypted message is \" ";
                  for(int y=0; y<i; y++)
                   {
                       if(ptr[y]>= 'a' && ptr[y] <= 'z' )
@@ -338,25 +291,22 @@ void Enigma::Cipher()
                           a = B.swap(a);
                           a = E.Encrypt(a);
                           a = D.Encrypt(a);
-                         a = C.Encrypt(a);
-                         a = A.swap(a);
-                        //  cout<< a;
-                          fout<<a;
+                          a = C.Encrypt(a);
+                          a = A.swap(a);
+                     //     cout<< a;
+                          Output = Output + a;
                         }
                       else
                         {
-                      //   cout<<ptr[y];
-                         fout<<ptr[y];
+                     //    cout<<ptr[y];
+                         Output = Output + ptr[y];
                         }
                   }
-                  //cout<<" key:  "<<R1<<" "<<R2<<" "<<R3;
-                        fout<<" key:  "<<R1<<" "<<R2<<" "<<R3;
-                        fout<<endl;
-               //cout<<"\""<<endl;
-            }}}
-            fout.close();
-    }
+                  //cout<<"String is "<<Output<<endl;
+                  return Output;
+              // cout<<"\""<<endl;
 
+    }
 
 
 Enigma::~Enigma()

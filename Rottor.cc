@@ -1,4 +1,3 @@
-
 Rottor::Rottor()
 {
 	Key=0;

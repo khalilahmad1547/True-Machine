@@ -1,15 +1,15 @@
 #include <iostream>
-#include "Enigma.h"
-#include "Enigma.cc"
 using namespace std;
+#include "Tape.h"
+#include "Tape.cc"
+#include "TuringMachine.h"
+#include "TuringMachine.cc"
 
-Enigma *Enigma::instance = 0;
+
 
 int main(int argc, char ** argv)
 {
-
-    Enigma *E = E->getInstance();
-    E->FileHandling(argv[1], argv[2], argc);
-    E->Cipher();
+    TuringMachine R;
+    R.Find(argv[1], argv[2], argc);
     return 0;
 }

@@ -1,2 +1,2 @@
 # Enigma-
-Breaking Enigma code and find rotor Position
+implementing Enigma in c++ 

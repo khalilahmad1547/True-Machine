@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1576768863 source:c:\users\abdullah\documents\cpp\tape\main.cpp
+	<iostream>
+	"Tape.h"
+	"Tape.cc"
+	"TuringMachine.h"
+	"TuringMachine.cc"
+
+1576769210 c:\users\abdullah\documents\cpp\tape\tape.h
+	<map>
+	"Enigma.h"
+	"Enigma.cc"
+
+1576759715 c:\users\abdullah\documents\cpp\tape\enigma.h
+
+1576761301 c:\users\abdullah\documents\cpp\tape\enigma.cc
+	"Enigma.h"
+	<cstdlib>
+	<fstream>
+	<cstring>
+	"Rottor.h"
+	"Rottor.cc"
+	"plugboard.h"
+	"Plugboard.cc"
+	"Reflector.h"
+	"reflector.cc"
+
+1576176492 c:\users\abdullah\documents\cpp\tape\rottor.h
+
+1576176492 c:\users\abdullah\documents\cpp\tape\rottor.cc
+
+1576176492 c:\users\abdullah\documents\cpp\tape\plugboard.h
+
+1576176492 c:\users\abdullah\documents\cpp\tape\plugboard.cc
+	"plugboard.h"
+
+1576176492 c:\users\abdullah\documents\cpp\tape\reflector.h
+
+1576176492 c:\users\abdullah\documents\cpp\tape\reflector.cc
+	"Reflector.h"
+	<cstring>
+
+1576769681 c:\users\abdullah\documents\cpp\tape\tape.cc
+	"Tape.h"
+
+1576768663 c:\users\abdullah\documents\cpp\tape\turingmachine.h
+
+1576768753 c:\users\abdullah\documents\cpp\tape\turingmachine.cc
+	"TuringMachine.h"
+
